@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_main"
+    app:startDestination="@id/toplama">
+
+    <fragment
+        android:id="@+id/toplama"
+        android:name="com.handeekin.bottomnavhw.BottomNav1"
+        android:label="fragment_bottom_nav1"
+        tools:layout="@layout/fragment_bottom_nav1" >
+        <action
+            android:id="@+id/action_toplama_to_toplamaSonucFragment"
+            app:destination="@id/toplamaSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpma"
+        android:name="com.handeekin.bottomnavhw.BottomNav2"
+        android:label="fragment_bottom_nav2"
+        tools:layout="@layout/fragment_bottom_nav2" >
+        <action
+            android:id="@+id/action_carpma_to_carpimSonucFragment"
+            app:destination="@id/carpimSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpimSonucFragment"
+        android:name="com.handeekin.bottomnavhw.CarpimSonucFragment"
+        android:label="fragment_carpim_sonuc"
+        tools:layout="@layout/fragment_carpim_sonuc" >
+        <argument
+            android:name="number2"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/toplamaSonucFragment"
+        android:name="com.handeekin.bottomnavhw.ToplamaSonucFragment"
+        android:label="fragment_toplama_sonuc"
+        tools:layout="@layout/fragment_toplama_sonuc" >
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
